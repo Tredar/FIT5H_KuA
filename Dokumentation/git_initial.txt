@@ -29,3 +29,7 @@ Aktualisieren eines Projektes
 2. ein git add . -A
 3. git commit -am 'Text zur Charaktarisierung'
 4. git push origin master
+
+Downloaden einer Datei
+1. in das Verzeichnis wo was geupdatet werden soll z.B cd ~/KuA/
+2. git pull origin master
