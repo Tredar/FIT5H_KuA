@@ -13,6 +13,7 @@ Erstellen eines lokalen Repositorys:
 	mkdir EuP
 2. Ordner mit git initialisieren
 	git init
+	#git init Ordnername erspar den mkdir-Befehl
 3. Datei erzeugen zum testen
 	touch test.txt
 4. Datei zum Repository hinzufuegen
@@ -33,3 +34,4 @@ Aktualisieren eines Projektes
 Downloaden einer Datei
 1. in das Verzeichnis wo was geupdatet werden soll z.B cd ~/KuA/
 2. git pull origin master
+
