@@ -35,3 +35,6 @@ Downloaden einer Datei
 1. in das Verzeichnis wo was geupdatet werden soll z.B cd ~/KuA/
 2. git pull origin master
 
+Konfiguration zum speichern von Usernamen und Passwort:
+	git config --global credential.helper cache
+	git config --global credential.helper "cache --timeout=10000000"
