@@ -63,20 +63,42 @@ IF Anweisung
 	fi
 
 Schleifen:
-
-	while [[ $eingabe -ne 1 ]]
+	Die Schleife wird ausgeführt solange bis der Wert der Variable $eingabe nicht 1 ist.
+	while [[ $eingabe = true ]]
 	do
 	        read -p "Eingabe: " eingabe
 	        echo $eingabe
 	done
 
+	Wiederholung bis der geprüfte Wert ein false ergibt
+	until [[ $eingabe = false ]]
+	do
+		read -p "Eingabe: " eingabe
+		echo $eingabe
+	done
+
+	array=( eins zwei drei )
+	for i in "${array[@]}"
+	do
+		echo $i
+	done
+
+
 Operatoren
 	[[ $var ]]		true falls in $var etwas steht außer false oder 0
+	[[ !$var ]]		true falls $var ist 0, flase, oder leer
+
+	Strings
+	[[ wert1 = 'string' ]] gibt true wenn wert1 gleich Zeichenkette ist
+	[[ wert1 != 'string' ]] gibt true wenn wert1 ungleich Zeichenkette ist
+
+	arithmetische Werte
 	[[ wert1 -eq wert2 ]]	gibt true wenn wert1 gleich wert2
 	[[ wert1 -ne wert2 ]]	gibt true wenn wert1 ungleich wert2
 	[[ wert1 -gt wert2 ]]	gibt true wenn wert1 größer wert2
 	[[ wert1 -lt wert2 ]]	gibt true wenn wert1 kleiner wert2
 
+	systemoperatoren
 	[[ -e $dateiname ]]		gibt true wenn Datei vorhanden ist
 	[[ -d $verzeichnis ]]	gibt true wenn Verzeichnis vorhanden ist
 
