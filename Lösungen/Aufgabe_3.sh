@@ -10,13 +10,14 @@ zeitpunkt=$(date)
 
 read -p "Name der Datei?:" topic
 
-if [[ ! ls /home/fabian/KuA/Lösungen/$topic.notes.txt ]]
+if [[ ! -e /home/fabian/KuA/Lösungen/$topic.notes.txt ]]
 	then
 		touch /home/fabian/KuA/Lösungen/$topic.notes.txt
 		read -p "Ihre Notiz lautet?:" notes
-		cat >/home/fabian/KuA/Lösungen/$topic.notes.txt notes strg + d
+		notes >> $topic.notes.txt
 else
-	echo "Fehler"
+	read -p "Ihre Notiz lautet?:" notes
+	notes >> $topic.notes.txt
 fi
 
 echo $zeitpunkt
